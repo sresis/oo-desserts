@@ -31,20 +31,20 @@ class Cupcake:
 
       self.qty -= amount
 
-
-
     @staticmethod
     def scale_recipe(ingredients, amount):
 
-      for ingredient in ingredients:
-        ingredient[1] = ingredient[1] * amount
 
-      return ingredients
+      return [(ingredient, qty * amount)
+              for ingredient, qty in ingredients]
 
     @classmethod
     def get(cls, name):
-      if self.name not in Class.cache:
+
+      if name not in cls.cache:
         print(f"Sorry, that cupcake doesn't exist")
+
+      return cls.cache[name]
 
 
 
