@@ -22,11 +22,14 @@ class Cupcake:
       #if self.qty > 0 and self.qty < amount:
        # print(f'Not enough cupcakes. there are {self.qty} left.')
 
-      while self.qty > 0 and amount > 0:
-        self.qty = self.qty - 1
-        amount +- 1
-      if self.qty < 0:
+      if self.qty == 0:
         print('Sorry, these cupcakes are sold out')
+
+      if self.qty < amount:
+        self.qty = 0
+        return
+
+      self.qty -= amount
 
 
 
