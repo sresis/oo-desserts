@@ -53,6 +53,28 @@ class Cupcake:
 
       return cls.cache[name]
 
+class Brownies(Cupcake):
+
+  cache = {}
+  flavor = 'chocolate'
+
+  def __init__(self, name, price, qty):
+    super().__init__(name, price, qty)
+    # qty added
+
+    def add_stock(self, amount):
+      return super().add_stock()
+
+    def sell(self, amount):
+      return super().sell()
+
+    @staticmethod
+    def scale_recipe(ingredients, amount):
+      return super().scale_recipe()
+
+    @staticmethod
+    def get(cls, name):
+      return super().get()
 
 
 
