@@ -53,14 +53,14 @@ class Cupcake:
 
       return cls.cache[name]
 
-class Brownies(Cupcake):
+class Brownie(Cupcake):
 
   cache = {}
   flavor = 'chocolate'
 
   def __init__(self, name, price, qty):
     super().__init__(name, price, qty)
-    # qty added
+    self.qty = qty
 
     def add_stock(self, amount):
       return super().add_stock()
